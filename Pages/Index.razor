@@ -1,0 +1,50 @@
+﻿@page "/"
+
+<SfGrid ID="Grid" DataSource="@OrderData" @ref="GridReference" >
+    <GridEditSettings AllowAdding="true" ></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field="OrderID" HeaderText="Order ID"></GridColumn>
+        <GridColumn Field="CustomerID" HeaderText="Customer"></GridColumn>
+        <GridColumn Field="Freight" HeaderText="Freight" Format="C2"></GridColumn> 
+        <GridColumn Field="ShipCountry" HeaderText="Ship Country"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<SfFab Content="ADD" Target="#Grid" OnClick="AddRecord" IconCss="e-icons e-plus" 
+IconPosition="IconPosition.Right" Position="FabPosition.BottomLeft" 
+CssClass="e-outline">
+</SfFab>
+
+
+@code {
+
+    SfGrid<DataModel> GridReference;
+
+    public async Task AddRecord()
+    {
+        await this.GridReference.AddRecordAsync();
+    }
+
+    public class DataModel
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+    List<DataModel> OrderData = new List<DataModel>
+    {
+        new DataModel { OrderID=10242, CustomerID="VINET", Freight=38.09, ShipCountry="Germany" },
+        new DataModel { OrderID=10243, CustomerID="TOMSP", Freight=28.07, ShipCountry="France"},
+        new DataModel { OrderID=10244, CustomerID="HANAR", Freight=34.25, ShipCountry="Belgium"},
+        new DataModel { OrderID=10245, CustomerID="VICTE", Freight=55.12, ShipCountry="Brazil"},
+        new DataModel { OrderID=10246, CustomerID="SUPRD", Freight=47.18, ShipCountry="Germany"},
+        new DataModel { OrderID=10247, CustomerID="TOMSP", Freight=39.14, ShipCountry="Belgium"},
+        new DataModel { OrderID=10248, CustomerID="VICTE", Freight=26.09, ShipCountry="France"},
+        new DataModel { OrderID=10249, CustomerID="VINET", Freight=41.23, ShipCountry="Brazil"},
+        new DataModel { OrderID=10250, CustomerID="HANAR", Freight=31.05, ShipCountry="Belgium"},
+        new DataModel { OrderID=10251, CustomerID="TOMSP", Freight=51.23, ShipCountry="Germany"},
+        new DataModel { OrderID=10252, CustomerID="SUPRD", Freight=11.32, ShipCountry="France"},
+        new DataModel { OrderID=10253, CustomerID="HANAR", Freight=46.07, ShipCountry="Brazil"}
+    };
+}
