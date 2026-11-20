@@ -8,6 +8,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("NzY1MDI0QDMyMzAy
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
 builder.RootComponents.Add<HeadOutlet>("head::after");
+
 builder.Services.AddSyncfusionBlazor();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
