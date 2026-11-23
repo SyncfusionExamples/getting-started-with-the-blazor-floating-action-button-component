@@ -12,7 +12,7 @@ Documentation: https://blazor.syncfusion.com/documentation/floating-action-butto
 - Enables adding records through `GridEditSettings` and `AddRecordAsync`.
 - Sets the button label through `Content` and the plus icon through `IconCss`.
 - Places the icon on the right through `IconPosition`.
-- Anchors the button to the grid through `Target` and places it at the bottom left through `Position`.
+- Anchors the button to the grid through `Target` and places it at the bottom right through `Position`.
 - Applies an outline appearance through `CssClass`.
 
 ## Prerequisites
