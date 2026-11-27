@@ -1,6 +1,4 @@
-# Title
-
-Getting Started with the Blazor Floating Action Button Component
+# Getting Started with the Blazor Floating Action Button Component
 
 ## Overview
 
@@ -33,7 +31,7 @@ The FAB is configured with custom text, an icon, custom styling, and a fixed pos
 **Visual Studio 2022**
 
 1. Clone or download the repository.
-2. Open `ButtonExample.cspro`.
+2. Open `ButtonExample.csproj`.
 3. Restore all NuGet packages.
 4. Build the solution.
 5. Run the application using `Ctrl+F5`.
@@ -42,20 +40,25 @@ The FAB is configured with custom text, an icon, custom styling, and a fixed pos
 
 1. Open the repository folder in Visual Studio Code.
 2. Open the integrated terminal.
-3. Navigate to the project directory.
+3. Navigate to the `ButtonExample` project directory:
+
+```bash
+cd ButtonExample
+```
+
+4. Restore project dependencies:
 
 ```bash
 dotnet restore
+```
+
+5. Run the application:
+
+```bash
 dotnet run
 ```
 
-4. Open the application URL displayed in the terminal.
-
-## Project Structure
-
-- `ButtonExample.csproj` — Blazor WebAssembly project file containing package references and build configuration.
-
-- `Pages/Index.razor` — Demonstrates the Syncfusion Floating Action Button integrated with a Grid. Uses `SfFab`, `SfGrid<DataModel>`, `AddRecordAsync()`, custom positioning, icons, and styling.
+6. Open the local URL displayed in the terminal after the application starts.
 
 ## Support and Feedback
 
